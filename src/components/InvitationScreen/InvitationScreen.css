@@ -1,0 +1,85 @@
+/* Styles for the Invitation Screen */
+.invitation-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    border-radius: 0 0 10px 5px;
+    background: 
+        
+        url('/images/Hero.JPEG'); /* Gambar latar belakang */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    clip-path: ellipse(150% 98% at 50% 0%);
+}
+  
+  /* Styling the invitation card */
+  .invitation-card {
+    position: relative;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 30px;
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+    top: 120px;
+    border-radius: 20px;
+    z-index: 1;
+  }
+  
+  .invitation-card h1, .invitation-card p {
+    font-family: 'Arial', sans-serif;
+    color: white;
+    margin-bottom: 10px;
+  }
+  
+  /* Melingkarkan teks pada nama */
+  .invitation-card h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    display: inline-block;
+    border-radius: 50%;
+    padding: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  /* Styling QR code */
+  .qr-code {
+    margin: 20px auto;
+    width: 100px;
+    height: 100px;
+    background: url('/images/qrcode.png') no-repeat center center;
+    background-size: contain;
+  }
+  
+  /* Button styling */
+  .invitation-card button {
+    padding: 12px 30px;
+    background-color: #3a3a3a;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+    z-index: 3;
+  }
+  
+  .invitation-card button:hover {
+    background-color: #3e3e3e;
+  }
+  
+  /* Animasi untuk tombol */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

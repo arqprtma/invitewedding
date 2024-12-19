@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'Allura';
+    src: url('/fonts/Allura-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  /* Container audio */
+  .audio-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Teks "Lagu" */
+  .audio-title {
+    font-size: 1.2rem;
+    margin-right: 10px; /* Memberikan jarak antara teks dan toggle */
+    color: #333;
+  }
+  
+  /* Toggle icon */
+  .audio-toggle {
+    cursor: pointer;
+    font-size: 2rem;
+    color: #666; /* Warna default */
+  }
+  
+  .audio-toggle:hover {
+    color: #3a3a3a; /* Warna saat hover */
+  }
+  
+  .material-icons {
+    font-size: 2rem; /* Ukuran ikon */
+    transition: color 0.3s ease;
+    z-index: 999999999;
+  }
+  
+  /* Warna toggle saat aktif */
+  .audio-toggle .material-icons {
+    color: #3e3e3e; /* Hijau saat aktif */
+  }
+  
+
+  /* Warna toggle saat aktif (on) */
+.audio-toggle .material-icons.is-playing {
+    color: black; /* Hijau untuk toggle aktif */
+  }
+  
+  /* Warna toggle saat non-aktif (off) */
+  .audio-toggle .material-icons.is-paused {
+    color: black; /* Abu-abu untuk toggle non-aktif */
+  }

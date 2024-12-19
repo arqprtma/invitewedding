@@ -1,0 +1,181 @@
+/* Profile.css */
+
+/* Styling untuk judul dan paragraf di atas card */
+.profile-judul {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 30px;
+    color: #333;
+}
+
+.andhika-name, .dewi-name {
+    font-family: 'Allura', sans-serif;
+}
+
+p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+    margin: 10px 0 20px 0;
+}
+
+/* Styling untuk card yang membungkus kedua profil */
+.profile-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+/* Styling untuk setiap profil */
+.andhika-profile, .dewi-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%; /* Mengatur lebar profil */
+    padding: 10px;
+    text-align: center;
+}
+
+/* Gambar profil dengan border dan lingkaran */
+.andhika-img, .dewi-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 4px solid #ddd;
+}
+
+/* Nama profil */
+.andhika-name, .dewi-name {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+}
+
+/* Paragraf dan nama orang tua */
+p {
+    font-size: 1.1rem;
+    color: #666;
+    margin: 5px 0;
+}
+
+.andhika-parents, .dewi-parents {
+    font-size: 1.2rem;
+    color: #444;
+    font-weight: 500;
+}
+
+.divider {
+    display: flex;
+    justify-content: center;
+ 
+  }
+  
+  .divider img {
+    width: 120px; /* Sesuaikan ukuran gambar divider */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Animasi untuk naik ke atas */
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Tambahkan animasi ke elemen-elemen */
+.profile-judul {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 30px;
+    color: #333;
+    animation: slideUp 1s ease-out;
+}
+
+.profile-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 30px;
+    animation: slideUp 1s ease-out 0.3s; /* Delay untuk sinkronisasi */
+}
+
+.andhika-profile, .dewi-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%; /* Mengatur lebar profil */
+    padding: 10px;
+    text-align: center;
+    animation: slideUp 1s ease-out 0.5s; /* Delay tambahan */
+}
+
+/* Default state: elemen tersembunyi */
+.profile-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease-out;
+}
+
+/* Saat elemen terlihat, tambahkan animasi */
+.profile-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+  
+
+/* Mobile responsive - styling untuk tampilan layar kecil */
+@media (max-width: 768px) {
+    .profile-card {
+        flex-direction: column; /* Profil ditampilkan dalam satu kolom */
+        padding: 15px;
+    }
+
+    .andhika-profile, .dewi-profile {
+        width: 100%; /* Lebar penuh untuk setiap profil */
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 1.8rem; /* Ukuran font judul lebih kecil di mobile */
+    }
+
+    p {
+        font-size: 1rem; /* Ukuran font paragraf lebih kecil di mobile */
+    }
+
+    .andhika-img, .dewi-img {
+        width: 150px; /* Ukuran gambar lebih kecil di mobile */
+        height: 150px;
+    }
+
+    .divider img {
+        width: 100px; /* Ukuran divider lebih kecil di mobile */
+      }
+}

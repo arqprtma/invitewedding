@@ -1,0 +1,136 @@
+/* Kontainer utama galeri */
+.gallery-container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    border-radius: 10px;
+    overflow-x: hidden; /* Default tidak ada scroll horizontal */
+  }
+  
+  /* Grid untuk tata letak kolom */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 16px;
+  }
+  
+  .gallery-item {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Gambar di dalam item */
+  .gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .gallery-img:hover {
+    transform: scale(1.05);
+  }
+
+  
+  /* Item tidak beraturan */
+  .gallery-item.wide {
+    grid-column: span 2;
+  }
+  
+  .gallery-item.tall {
+    grid-row: span 2;
+  }
+  
+  /* Caption di bawah galeri */
+  .gallery-caption {
+    margin-top: 20px;
+    text-align: center;
+    color: #555;
+  }
+  
+  .gallery-caption blockquote {
+    font-style: italic;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .gallery-caption p {
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 0;
+  }
+
+  /* Animasi muncul dari bawah */
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Gaya untuk item sebelum terlihat */
+.gallery-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Gaya untuk item yang terlihat */
+.gallery-item.visible {
+  animation: slideUp 0.5s ease-in-out forwards;
+}
+
+/* Gaya untuk elemen sebelum terlihat */
+.judul,
+.gallery-caption {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Gaya untuk elemen yang terlihat */
+.judul.visible,
+.gallery-caption.visible {
+  animation: slideUp 0.5s ease-in-out forwards;
+}
+
+/* Animasi muncul dari bawah */
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+  
+  /* Mobile View - Scroll Horizontal */
+  @media (max-width: 768px) {
+    .gallery-grid {
+      display: flex; /* Ubah menjadi flexbox */
+      flex-wrap: nowrap; /* Jangan bungkus item */
+      overflow-x: auto; /* Aktifkan scroll horizontal */
+      gap: 16px; /* Jarak antar item */
+      padding-bottom: 10px;
+    }
+  
+    .gallery-item {
+      flex: 0 0 auto; /* Pastikan ukuran item tetap */
+      width: 200px; /* Tentukan lebar tetap untuk item */
+    }
+  
+    .gallery-container {
+      padding: 10px; /* Sesuaikan padding untuk mobile */
+    }
+  }
+  

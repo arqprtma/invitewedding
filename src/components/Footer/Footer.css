@@ -1,0 +1,66 @@
+/* Kontainer utama footer */
+.footer-container {
+    background: linear-gradient(to top, #f7f7f7, #ffffff); /* Gradasi lembut */
+    padding: 40px 20px;
+    text-align: center;
+   
+    color: #333;
+    border-top: 2px solid #e0e0e0; /* Garis tipis di atas footer */
+  }
+  
+  /* Teks utama */
+  .footer-text {
+    font-size: 1.5rem;
+    margin: 0 0 20px 0;
+    line-height: 1.8;
+    font-style: italic;
+  }
+  
+  /* Teks ucapan terima kasih */
+  .footer-thank-you {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  /* Dekorasi bunga */
+  .footer-decoration img {
+    max-width: 150px;
+    margin-top: 20px;
+    animation: fadeIn 2s ease-in-out;
+  }
+
+  .flower {
+    width: 50px;
+  }
+  
+  /* Animasi dekorasi */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsif untuk layar kecil */
+  @media (max-width: 768px) {
+    .footer-text {
+      font-size: 1rem;
+    }
+    .footer-thank-you {
+      font-size: 0.9rem;
+    }
+    .footer-decoration img {
+      max-width: 100px;
+    }
+
+    .flower {
+        width: 30px;
+      }
+  }
+  

@@ -1,0 +1,137 @@
+.gift {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+.gift-description{
+    text-align: center;
+    margin: auto;
+    width: 80%;
+    margin-bottom: 20px;
+    font-family: 'Allura', sans-serif;  
+    font-size: 24px !important;
+}
+.gift-descripition-1{
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+.gift-container {
+    display: flex;
+    gap: 20px; /* Jarak antara kartu */
+    flex-wrap: wrap; /* Memungkinkan kartu untuk membungkus ke baris baru pada layar kecil */
+    justify-content: center; /* Memusatkan kartu di tengah */
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .gift-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 45%; /* Lebar kartu sekitar 45% dari container, jadi dua kartu bisa sejajar */
+    min-width: 300px; /* Memastikan kartu tidak terlalu kecil pada perangkat yang lebih kecil */
+  }
+  
+  h2 {
+    text-align: center;
+    color: #555;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+  }
+  
+  .note {
+    text-align: center;
+    color: #777;
+    font-size: 14px;
+  }
+  
+  .wallet-card, .gift-info {
+    margin-bottom: 20px;
+  }
+  
+  .wallet-card {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .wallet-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .wallet-info h4 {
+    color: #6a0dad;
+    margin-right: 10px;
+    font-size: 16px;
+  }
+  
+  .bank-logo {
+    height: 25px;
+  }
+  
+  .account-number {
+    font-size: 18px;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .copy-icon {
+    margin-left: 10px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .copy-notification {
+    display: block;
+    margin-top: 10px;
+    color: green;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .offline-gift {
+    background-color: #f0f0f5;
+  }
+  
+  .gift-description {
+    color: #333;
+    font-size: 16px;
+  }
+  
+  .gift-info h4 {
+    color: #009688;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .gift-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  .gift-section.animate-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Tambahan lainnya tetap sama seperti sebelumnya */
+  
+  

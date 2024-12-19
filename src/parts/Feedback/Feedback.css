@@ -1,0 +1,213 @@
+
+  
+  /* Feedback Form Styles */
+  .judul-feedback {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  form {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Times New Roman', Times, serif !important;
+  }
+  
+  form div {
+    margin-bottom: 15px;
+  }
+  
+  form label {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  form input[type="text"],
+  form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  form input[type="text"]:focus,
+  form textarea:focus {
+    border-color: #3a3a3a;
+  }
+  
+  form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #3a3a3a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  form button:hover {
+    background-color: #3e3e3e;
+  }
+  
+  /* Feedback List Styles */
+  .feedback-list {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .feedback-list li {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .feedback-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .feedback-list strong {
+    display: block;
+    font-size: 16px;
+    color: #3e3e3e;
+    margin-bottom: 10px;
+  }
+  
+  .feedback-list .message {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  .feedback-list .date {
+    font-size: 12px;
+    color: #888;
+    margin-top: 15px;
+    text-align: right;
+  }
+
+  .daftar-feedback {
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  .table {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    height: 300px;
+    overflow: scroll;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Times New Roman', Times, serif !important;
+  }
+  
+  /* Error Message Styles */
+  .error-message {
+    color: red;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+  }
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.status {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.status:focus {
+  border-color: #3e3e3e;
+}
+
+.status option {
+  font-size: 16px;
+}
+
+/* Animasi slide-up */
+@keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Default sebelum animasi */
+  .animate-slide-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  /* Ketika elemen terlihat */
+  .animate-slide-up.show {
+    opacity: 1;
+    transform: translateY(0);
+    animation: slideUp 0.5s ease-out;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    form {
+      padding: 15px;
+    }
+  
+    form button {
+      font-size: 14px;
+    }
+  
+    .feedback-list li {
+      padding: 15px;
+    }
+  
+    .feedback-list strong {
+      font-size: 14px;
+    }
+  
+    .feedback-list p {
+      font-size: 12px;
+    }
+  }
+  

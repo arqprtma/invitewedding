@@ -1,0 +1,126 @@
+.text {
+    color: black;
+}
+
+@font-face {
+    font-family: 'Allura';
+    src: url('/fonts/Allura-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.background-hero {
+    background-image: url('/images/Hero.JPEG');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.background-hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%; /* Atur tinggi gradasi sesuai kebutuhan */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent); /* Gradasi dari hitam transparan */
+    pointer-events: none; /* Agar elemen gradasi tidak menghalangi konten */
+}
+
+.background-hero h3 {
+    margin: 10px 0; 
+    font-size: 1rem; 
+}
+
+.background-hero h2 {
+    margin: 10px 0; 
+    font-size: 3rem; 
+    font-family: 'Allura', sans-serif;
+    color: white;
+}
+
+.background-hero p {
+    margin: 10px 0 20px 0;
+    font-size: 1rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.background-hero h3, .background-hero h2, .background-hero p, .scroll-down-icon span {
+    animation: fadeIn 1s ease-in-out, slideUp 1s ease-in-out;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+}
+
+.background-hero p {
+    animation-delay: 1s; 
+}
+
+.scroll-down-icon {
+    margin-top: 50px;
+    font-size: 30px;
+    animation: bounce 1.5s infinite;
+    cursor: pointer;
+}
+
+.scroll-down-icon span {
+    display: inline-block;
+    font-size: 2rem;
+    color: white; /* Ganti warna ikon menjadi putih agar lebih kontras dengan latar belakang gelap */
+}
+
+/* Animasi bounce untuk ikon scroll */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+@media (max-width: 768px) {
+    .background-hero h3 {
+        font-size: 0.8rem; /* Ukuran font lebih kecil untuk layar mobile */
+        margin: 8px 0; 
+    }
+    .background-hero h2 {
+        font-size: 1.5rem; /* Ukuran font lebih kecil untuk layar mobile */
+        margin: 8px 0; 
+    }
+
+    .background-hero p {
+        font-size: 0.8rem; /* Mengatur ukuran font paragraf */
+        margin: 8px 0 16px 0; 
+    }
+
+    .scroll-down-icon {
+        font-size: 20px; /* Sesuaikan ukuran ikon dengan ukuran layar lebih kecil */
+    }
+}
