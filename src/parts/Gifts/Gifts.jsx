@@ -53,25 +53,15 @@ function Gifts() {
 
           <div className="wallet-card">
             <div className="wallet-info">
-              <h4>Dewi Syafira</h4>
+              <h4>Widia</h4>
               <img src="/images/BCA.png" alt="Logo BCA" className="bank-logo" />
             </div>
             <div className="account-number" onClick={() => handleCopy("5500064538")}>
-              5500064538
+              1790014029
               <span className="copy-icon">📋</span>
             </div>
           </div>
 
-          <div className="wallet-card">
-            <div className="wallet-info">
-              <h4>Handhika Widjaja Saputra</h4>
-              <img src="/images/BCA.png" alt="Logo BNI" className="bank-logo" />
-            </div>
-            <div className="account-number" onClick={() => handleCopy("7040142406")}>
-              7040142406
-              <span className="copy-icon">📋</span>
-            </div>
-          </div>
 
           {isCopied && <span className="copy-notification">Copied!</span>}
         </div>
