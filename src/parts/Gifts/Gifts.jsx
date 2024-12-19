@@ -56,7 +56,7 @@ function Gifts() {
               <h4>Widia</h4>
               <img src="/images/BCA.png" alt="Logo BCA" className="bank-logo" />
             </div>
-            <div className="account-number" onClick={() => handleCopy("5500064538")}>
+            <div className="account-number" onClick={() => handleCopy("1790014029")}>
               1790014029
               <span className="copy-icon">📋</span>
             </div>
